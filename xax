@@ -9,3 +9,74 @@ for i, student in enumerate(students, start=1):
     print(f'{i}. {student}')
 
 print(f'Всего учеников: {amount_students}')
+200б
+
+trip = {
+    'Степанова Даша': False,
+    'Сидоров Ваня': True,
+    'Листьева Галя': True,
+    'Иванова Саша': False,
+    'Николаев Олег': True,
+    'Снежанова Алиса': True,
+    'Ушаков Коля': False
+}
+
+for student, is_paid in trip.items():
+    if is_paid:
+        print(student)
+200б
+
+books = {
+    'Оно': 'Секция 1, стеллаж 4, полка 4',
+    'Алиса в стране чудес': 'Секция 2, стеллаж 12, полка 1',
+    'Карлсон, который живёт на крыше': 'Секция 5, стеллаж 1, полка 3',
+    'Гарри Поттер': 'Секция 16, стеллаж 8, полка 1'
+}
+
+book_name = 'Золушка'
+if book_name in books:
+    print(f"{book_name} - {books[book_name]}")
+else:
+    books[book_name] = 'Секция 30, стеллаж 1, полка 1'
+    print(f"{book_name} - {books[book_name]}")
+book_name = 'Гарри Поттер'
+if book_name in books:
+    print(f"{book_name} - {books[book_name]}")
+else:
+    books[book_name] = 'Секция 30, стеллаж 1, полка 2'
+    print(f"{book_name} - {books[book_name]}")
+300б
+
+houses = {
+    1: 5,
+    2: 5,
+    3: 5,
+    4: 2,
+    5: 2,
+    6: 3,
+    7: 3,
+    8: 3,
+    9: 9,
+    10: 9,
+    11: 24
+}
+
+for house_number, floors in houses.items():
+    if floors > 5:
+        print(house_number)
+200б
+trip = {
+    'Степанова Даша': False,
+    'Сидоров Ваня': True,
+    'Листьева Галя': True,
+    'Иванова Саша': False,
+    'Николаев Олег': True,
+    'Снежанова Алиса': True,
+    'Ушаков Коля': False
+}
+
+for student, is_paid in trip.items():
+    if is_paid:
+        print(student) 
+200б
+
