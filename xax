@@ -97,3 +97,133 @@ for score in test_results[1]:
 average_after /= len(test_results[1]) 
 print('Средний результат «после»: {:.2f}'.format(average_after)) 
 100б
+def staff_min_efficiency(staff):
+    min_efficiency = float('inf') 
+    worst_employee = None          
+    
+    for employee, info in staff.items():
+        efficiency = info['эффективность']
+        if efficiency < min_efficiency:
+            min_efficiency = efficiency
+            worst_employee = employee
+            
+    return worst_employee, min_efficiency
+
+def staff_max_efficiency(staff):
+    max_efficiency = float('-inf')  
+    best_employee = None           
+    
+    for employee, info in staff.items():
+        efficiency = info['эффективность']
+        if efficiency > max_efficiency:
+            max_efficiency = efficiency
+            best_employee = employee
+            
+    return best_employee, max_efficiency
+
+staff = {
+    'Смирнов': {
+        'должность': 'менеджер по продажам',
+        'эффективность': 86
+    },
+    'Колягина': {
+        'должность': 'менеджер по продажам',
+        'эффективность': 69
+    },
+    'Костин': {
+        'должность': 'менеджер по продажам',
+        'эффективность': 78
+    },
+    'Щербаков': {
+        'должность': 'менеджер по продажам',
+        'эффективность': 91
+    },
+    'Борисова': {
+        'должность': 'менеджер по продажам',
+        'эффективность': 99
+    }
+}
+best_employee, best_result = staff_max_efficiency(staff)
+worst_employee, worst_result = staff_min_efficiency(staff)
+
+print('Лучший результат:', best_employee, '-', best_result)
+print('Худший результат:', worst_employee, '-', worst_result)    
+200б 
+staff = {
+    'Фролова': {
+        'должность': 'маркетолог',
+        'эффективность': 71
+    },
+    'Коровин': {
+        'должность': 'маркетолог',
+        'эффективность': 65
+    },
+    'Пивоваров': {
+        'должность': 'маркетолог',
+        'эффективность': 49
+    },
+    'Листьева': {
+        'должность': 'маркетолог',
+        'эффективность': 53
+    }
+}
+
+def find_ineffective_staff(staff_data):
+    for surname, details in staff_data.items():
+        if details['эффективность'] < 50:
+            return f"Сотрудник {surname} рекомендован к увольнению."
+    return ""
+ineffective_message = find_ineffective_staff(staff)
+if ineffective_message:
+    print(ineffective_message)
+else:
+    print("")
+200б 
+besties = {
+    '6а': ['Иванова', 'Петров', 'Петренко', 'Степанов'],
+    '7а': ['Васильев', 'Игнатова']
+}
+
+besties['6б'] = ['Ивлев', 'Сергеев', 'Иванов', 'Романов']
+
+
+def find_besties_start_with_i(besties_dict):
+    result = []
+    for class_name, names in besties_dict.items(): 
+        for name in names:                          
+            if name.startswith('И'):               
+                result.append(name)
+    return result
+
+found_names = find_besties_start_with_i(besties)
+
+if found_names:
+    print("Отличники, фамилии которых начинаются на букву И:")
+    for name in found_names:
+        print(name)
+else:
+    print("Отличников с такими фамилиями не обнаружено.") 
+300б 
+
+from turtle import *
+class Sprite(Turtle):
+    def __init__(self, x, y, step=10, shape='turtle', color='red'): 
+        super().__init__()
+        self.penup()
+        self.speed(0)
+        self.goto(x, y)
+        self.color(color)
+        self.shape(shape)
+        self.step = step
+        self.points = 0
+ 
+    def move_up(self):
+        self.goto(self.xcor(), self.ycor() + self.step)
+    def move_right(self):
+        self.goto(self.xcor() + self.step, self.ycor())
+sprite = Sprite(0, 0)  
+sprite.move_up()     
+sprite.move_right()    
+
+done() 
+300б 
