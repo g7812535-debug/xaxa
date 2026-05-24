@@ -1,0 +1,11 @@
+students = ['Смирнов', 'Иванов', 'Васильев', 'Молоткова', 'Алексашкина', 'Гришин']
+
+students.sort()
+
+amount_students = len(students)
+
+print('Список класса:')
+for i, student in enumerate(students, start=1):
+    print(f'{i}. {student}')
+
+print(f'Всего учеников: {amount_students}')
